@@ -39,7 +39,7 @@ if [ -z "$PHPVERSION" ]; then
 fi
 
 # Find out which php-fpm versions are installed en echo them
-INSTALLED_PHP_VERSIONS=$(apt list --installed | grep --only-matching --perl-regexp "php7\.\\d+-fpm")
+INSTALLED_PHP_VERSIONS=$(apt list --installed | grep --only-matching --perl-regexp "php[78]\.\\d+-fpm")
 echo "php-fpm versions installed: "
 for VERSION in "${INSTALLED_PHP_VERSIONS[@]}"
 do
